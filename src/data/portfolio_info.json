@@ -1,0 +1,22 @@
+{
+    "title": "Javier P. - Portfolio",
+    "description": "Personal website",
+    "menus": [
+        {
+            "href": "#",
+            "label": "Home"
+        },
+        {
+            "href": "#socials",
+            "label": "Socials"
+        },
+        {
+            "href": "#about",
+            "label": "About"
+        },
+        {
+            "href": "#stack",
+            "label": "Stack"
+        }
+    ]
+}

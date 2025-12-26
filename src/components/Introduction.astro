@@ -1,0 +1,82 @@
+---
+import { Image } from "astro:assets";
+
+interface IntroductionProps {
+    name: string;
+    name_short?: string;
+    username: string;
+    role: string;
+    location: string;
+    availability: boolean;
+    profileImage: string;
+}
+
+const { name, name_short, role, location, availability, profileImage } =
+    Astro.props as IntroductionProps;
+---
+
+<section class="w-full py-12 md:py-20">
+    <div class="max-w-4xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 px-4">
+        <article class="flex flex-col gap-6 flex-1">
+            <div class="content flex flex-col gap-4">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] text-white"
+                >
+                    Hi!<br />
+                    <span class="text-balance">
+                        My name is <span
+                            class="text-secondary whitespace-nowrap"
+                            >{name_short || name}</span
+                        >
+                    </span>
+                </h1>
+
+                <p class="text-lg md:text-xl text-gray-400 font-medium">
+                    {role}
+                </p>
+            </div>
+
+            <div class="location flex flex-col gap-3 text-sm md:text-base text-gray-300">
+                <span class="flex items-center gap-2">
+                    <iconify-icon
+                        icon="ph:map-pin-duotone"
+                        width="18"
+                        class="text-secondary"></iconify-icon>
+                    {location}
+                </span>
+
+                <span class={`flex items-center gap-2 before:content-[""] before:w-2 before:h-2 before:rounded-full ${availability ? "before:bg-green-400" : "before:bg-orange-400"}`}>
+                    {
+                        availability ? "Available for work" : "Currently working"
+                    }
+                </span>
+            </div>
+
+            <!-- <div class="pt-2">
+                <slot />
+            </div> -->
+        </article>
+
+        <div class="profile-pic w-70 h-80 shrink-0">
+            <Image
+                class="w-full h-full object-cover object-center"
+                src={profileImage}
+                alt={`Profile picture of ${name_short || name}`}
+                width={280}
+                height={320}
+                loading="eager"
+                decoding="async"
+            />
+        </div>
+    </div>
+</section>
+
+<style>
+    .profile-pic {
+        box-shadow:
+            rgba(var(--color-tertiary-rgb, 100, 100, 100), 0.4) 5px 5px,
+            rgba(var(--color-tertiary-rgb, 100, 100, 100), 0.3) 10px 10px,
+            rgba(var(--color-tertiary-rgb, 100, 100, 100), 0.2) 15px 15px,
+            rgba(var(--color-tertiary-rgb, 100, 100, 100), 0.1) 20px 20px,
+            rgba(var(--color-tertiary-rgb, 100, 100, 100), 0.05) 25px 25px;
+    }
+</style>

@@ -1,0 +1,44 @@
+---
+interface StackItem {
+    name: string;
+    icon: string;
+    styles?: string;
+}
+
+interface MyStack extends Array<StackItem> {}
+
+const { stack } = Astro.props as { stack: MyStack };
+---
+
+<section class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-white mb-10 text-left">
+        Stack
+    </h2>
+
+    <div class="flex flex-wrap gap-1 justify-center md:justify-start">
+        {
+            stack.map(({ name, icon, styles }) => (
+                <div class="group relative flex items-center justify-center w-10 h-10 transition-transform duration-200 hover:scale-110 z-0 hover:z-10">
+                    <iconify-icon
+                        icon={icon}
+                        width="40"
+                        height="40"
+                        class="transition-transform"
+                        style={styles ? styles : ""}
+                    />
+
+                    <span class="absolute -top-9 left-1/2 -translate-x-1/2 
+                                 opacity-0 group-hover:opacity-100 
+                                 pointer-events-none transition-opacity duration-100 
+                                 bg-white text-black text-[9px] font-black uppercase tracking-tighter
+                                 px-1.5 py-0.5 rounded shadow-xl
+                                 whitespace-nowrap"
+                    >
+                        {name}
+                        <span class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-white" />
+                    </span>
+                </div>
+            ))
+        }
+    </div>
+</section>

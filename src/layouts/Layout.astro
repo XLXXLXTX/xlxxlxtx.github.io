@@ -1,0 +1,20 @@
+---
+import Base from "@components/Base.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+
+const { title, description, menus = [], footer } = Astro.props;
+---
+
+<html lang="en">
+    <head>
+        <Base {title} {description} />
+    </head>
+    <body>
+        <Header {menus} />
+        <main class="w-full max-w-275 px-2 mx-auto">
+            <slot />
+        </main>
+        <Footer {...footer} />
+    </body>
+</html>
