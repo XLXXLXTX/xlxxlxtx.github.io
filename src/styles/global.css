@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-primary: #ffffff;
+    --color-secondary: #111827;
+    --color-button-primary: #030712;
+    --color-tertiary: #4b5563;
+}
+
+.dark {
+    --color-primary: #030712;
+    --color-secondary: #f9fafb;
+    --color-button-primary: #f1f1f1;
+    --color-tertiary: #d1d5db;
+}
+
+body {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
