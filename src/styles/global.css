@@ -6,6 +6,7 @@
     --color-secondary: #111827;
     --color-button-primary: #030712;
     --color-tertiary: #4b5563;
+    --color-tertiary-rgb: 75, 85, 99; /* rgb code for shadows effect in about section */
 }
 
 .dark {
@@ -13,6 +14,7 @@
     --color-secondary: #f9fafb;
     --color-button-primary: #f1f1f1;
     --color-tertiary: #d1d5db;
+    --color-tertiary-rgb: 209, 213, 219; /* rgb code for shadows effect in about section */
 }
 
 body {
@@ -20,8 +22,18 @@ body {
     color: var(--color-secondary);
 }
 
-html,
+/* html,
 body {
     height: 100%;
     overflow: hidden;
+} */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+body {
+    min-height: 100vh;
+    /* overflow-y: auto; */
 }
