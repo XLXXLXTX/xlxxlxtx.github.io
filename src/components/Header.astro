@@ -5,23 +5,26 @@ import Button from "@components/Button.astro";
 import menu from "@data/menu.json";
 ---
 
-<header class="header flex items-center justify-between w-full py-4 px-30 shadow shadow-secondary/10 neutral-600 bg-primary">
-    <p class="header-logo font-bold text-xl">Logo</p>
-    <div class="header-container flex gap-5 items-center">
-        <nav class="header-nav">
-            <ul class="nav-list flex items-center w-full gap-6 *:text-gray-600 dark:*:text-gray-300 *:font-medium">
-                {
-                    menu.map(({ href, label }) => (
-                        <li class="nav-item">
-                            <a class="nav-link" href={href}>
-                                {label}
-                            </a>
-                        </li>
-                    ))
-                }
-            </ul>
-        </nav>
-        <ThemeButton />
-        <Button label="CV" href="/docs/cv.pdf" />
+<header class="w-full py-4 px-6 shadow shadow-secondary/10 bg-primary">
+    <!-- <p class="header-logo font-bold text-xl">Logo</p> -->
+    <!-- wrapper for max width and centering -->
+    <div class="max-w-4xl mx-auto flex items-center justify-end">
+        <div class="header-container flex gap-5 items-center">
+            <nav class="header-nav">
+                <ul class="nav-list flex items-center w-full gap-6 *:text-gray-600 dark:*:text-gray-300 *:font-medium">
+                    {
+                        menu.map(({ href, label }) => (
+                            <li class="nav-item">
+                                <a class="nav-link" href={href}>
+                                    {label}
+                                </a>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </nav>
+            <ThemeButton />
+            <Button label="CV" href="/docs/cv.pdf" />
+        </div>
     </div>
 </header>
