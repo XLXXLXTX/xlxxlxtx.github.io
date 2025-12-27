@@ -10,15 +10,15 @@ interface MenuProps {
 const { menus } = Astro.props as MenuProps;
 ---
 
-<header class="w-full bg-primary sticky top-0 z-50">
+<header class="w-full bg-primary/80 backdrop-blur-md sticky top-0 z-50 transition-colors duration-300">
     <div class="max-w-4xl mx-auto px-6 border-b border-secondary/10 py-4 flex items-center justify-end">
         <div class="header-container flex gap-5 items-center">
             <nav class="header-nav">
-                <ul class="nav-list flex items-center w-full gap-6 *:text-gray-600 dark:*:text-gray-300 *:font-medium">
+                <ul class="nav-list flex items-center w-full gap-6 text-tertiary font-medium">
                     {
                         menus.map(({ href, label }) => (
                             <li class="nav-item">
-                                <a class="nav-link hover:text-white transition-colors"
+                                <a class="nav-link hover:text-secondary transition-colors duration-300"
                                     href={href}
                                 >
                                     {label}
