@@ -1,7 +1,7 @@
 ---
 import Card from "@components/Card.astro";
 
-interface AboutProps {
+interface SocialsProps {
     github: {
         label: string;
         icon: string;
@@ -16,7 +16,7 @@ interface AboutProps {
     };
 }
 
-const { github, linkedin } = Astro.props as AboutProps;
+const { github, linkedin } = Astro.props as SocialsProps;
 ---
 
 <section id="socials" class="max-w-4xl mx-auto py-5">
