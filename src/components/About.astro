@@ -10,14 +10,14 @@ const hasAbout = typeof about === "string" && about.trim().length > 0;
 
 <section id="about" class="max-w-4xl mx-auto">
     <article class="flex flex-col gap-6">
-        <h2 class="text-3xl font-bold text-white">About</h2>
+        <h2 class="text-3xl font-bold text-secondary">About</h2>
     </article>
 
     <div class="mb-5 py-5">
         {/* render an about in case there is one */}
         {
             hasAbout && (
-                <p class="text-lg leading-relaxed text-gray-300 whitespace-pre-line">
+                <p class="text-lg leading-relaxed text-tertiary whitespace-pre-line font-medium">
                     {about}
                 </p>
             )
