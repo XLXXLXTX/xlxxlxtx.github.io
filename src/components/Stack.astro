@@ -11,7 +11,7 @@ const { stack } = Astro.props as { stack: MyStack };
 ---
 
 <section class="max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold text-white mb-10 text-left">
+    <h2 class="text-3xl font-bold text-secondary mb-10 text-left">
         Stack
     </h2>
 
@@ -30,12 +30,12 @@ const { stack } = Astro.props as { stack: MyStack };
                     <span class="absolute -top-9 left-1/2 -translate-x-1/2 
                                  opacity-0 group-hover:opacity-100 
                                  pointer-events-none transition-opacity duration-100 
-                                 bg-white text-black text-[9px] font-black uppercase tracking-tighter
+                                 bg-button-primary text-primary text-[9px] font-black uppercase tracking-tighter
                                  px-1.5 py-0.5 rounded shadow-xl
                                  whitespace-nowrap"
                     >
                         {name}
-                        <span class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-white" />
+                        <span class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-button-primary" />
                     </span>
                 </div>
             ))
