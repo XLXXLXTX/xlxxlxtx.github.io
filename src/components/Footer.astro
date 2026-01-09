@@ -28,16 +28,6 @@ const { github, linkedin } = Astro.props as { github: SocialProp; linkedin: Soci
         </div>
 
         <nav class="flex gap-5">
-            {github && (
-                <a href={github.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title={github.label}
-                    class="text-tertiary hover:text-secondary transition-all duration-300 hover:-translate-y-1"
-                >
-                    <iconify-icon icon={github.icon} width="24" height="24" />
-                </a>
-            )}
             {linkedin && (
                 <a href={linkedin.link}
                     target="_blank"
@@ -46,6 +36,16 @@ const { github, linkedin } = Astro.props as { github: SocialProp; linkedin: Soci
                     class="text-tertiary hover:text-secondary transition-all duration-300 hover:-translate-y-1"
                 >
                     <iconify-icon icon={linkedin.icon} width="24" height="24" />
+                </a>
+            )}
+            {github && (
+                <a href={github.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={github.label}
+                    class="text-tertiary hover:text-secondary transition-all duration-300 hover:-translate-y-1"
+                >
+                    <iconify-icon icon={github.icon} width="24" height="24" />
                 </a>
             )}
         </nav>
