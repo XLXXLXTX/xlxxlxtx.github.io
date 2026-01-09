@@ -1,0 +1,62 @@
+---
+
+interface ProjectCardProps {
+    title: string;
+    description: string;
+    repoLink?: string;
+    tags?: string[];
+}
+
+const { title, description, repoLink, tags } = Astro.props as ProjectCardProps;
+
+// color classes based on tag names for now
+function getTagClasses(tag: string): string {
+    // to lower case and remove posible spaces, dots, or special chars
+    const key = tag.toLowerCase().replace(/[\s\.\-]/g, "");
+    const map: Record<string, string> = {
+      n8n: "bg-orange-400/15",
+      nodejs: "bg-green-500/15",
+      expressjs: "bg-gray-500/15",
+      tailwindcss: "bg-teal-500/15",
+      express: "bg-gray-500/15",
+      react: "bg-blue-500/15",
+      mongodb: "bg-green-600/15",
+      redis: "bg-red-600/15",
+      vercel: "bg-black/10",
+      tursodb: "bg-cyan-800/15",
+    };
+
+    return map[key] ?? "bg-primary/5";
+}
+---
+
+<details class="group bg-button-primary border border-tertiary/10 rounded-2xl transition-all duration-300 hover:scale-[1.01] hover:shadow-xl">
+    <summary class="flex items-center justify-between p-3 cursor-pointer">
+        <h3 class="text-xl font-bold text-primary">{title}</h3>
+        {repoLink && (
+            <a
+                href={repoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-primary/50 hover:text-primary transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 duration-300"
+                aria-label={`Ver repositorio de ${title}`}
+            >
+                <iconify-icon icon="mdi:github" width="24" />
+            </a>
+        )}
+    </summary>
+
+    <div class="px-4 pb-3 pt-0 border-tertiary/10">
+        <p class="text-primary/70 text-sm leading-snug">{description}</p>
+
+        {tags && tags.length > 0 && (
+            <div class="flex flex-wrap gap-2 mt-3">
+                {tags.map((tag) => (
+                    <span class={`px-2.5 py-0.5 text-[11px] font-medium rounded-lg border ${getTagClasses(tag)} text-primary border-primary/30 dark:border-primary/50`}>
+                        {tag}
+                    </span>
+                ))}
+            </div>
+        )}
+    </div>
+</details>
