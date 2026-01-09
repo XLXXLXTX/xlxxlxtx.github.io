@@ -1,7 +1,7 @@
 [
   {
     "title": "Recommender System using Language Models and Geolocation",
-    "description": "Bachelor’s Thesis — Recommender System using Language Models and Geolocation: Developed a tourism-focused recommendation engine powered by AI and workflow orchestration. Integrated LLMs, external APIs, and user data to deliver high-precision, personalized travel suggestions.",
+    "description": "Bachelor's Thesis — Developed a tourism-focused recommendation engine powered by AI and workflow orchestration. Integrated local and cloud-based LLMs, external APIs, and user data. Established a Likert-scale evaluation strategy to ensure response coherence and context relevance, while optimizing performance and cost by selecting LLMs based on task requirements and resource efficiency.",
     "repoLink": "https://github.com/XLXXLXTX/rec-sys-with-n8n-and-llms",
     "tags": [
       "n8n",
