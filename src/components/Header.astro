@@ -1,6 +1,6 @@
 ---
 import ThemeButton from "@components/ThemeButton.astro";
-import Button from "@components/Button.astro";
+// import Button from "@components/Button.astro";
 interface MenuProps {
     menus: {
         href: string;
@@ -30,7 +30,7 @@ const { menus } = Astro.props as MenuProps;
             </nav>
             <div class="flex items-center gap-4 ml-4 border-l border-secondary/10 pl-4">
                 <ThemeButton />
-                <Button label="CV" href="" />
+                <!-- <Button label="CV" href="" /> -->
             </div>
         </div>
     </div>
