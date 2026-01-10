@@ -32,14 +32,13 @@ function getTagClasses(tag: string): string {
 
 <details class="group bg-button-primary border border-tertiary/10 rounded-2xl transition-all duration-300 hover:scale-[1.01] hover:shadow-xl">
     <summary class="flex items-center justify-between p-3 cursor-pointer">
-        <h3 class="text-xl font-bold text-primary">{title}</h3>
+        <h3 class="text-xl font-bold text-primary text-title">{title}</h3>
         {repoLink && (
             <a
                 href={repoLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="text-primary/50 hover:text-primary transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 duration-300"
-                aria-label={`Ver repositorio de ${title}`}
             >
                 <iconify-icon icon="mdi:github" width="24" />
             </a>
@@ -47,12 +46,12 @@ function getTagClasses(tag: string): string {
     </summary>
 
     <div class="px-4 pb-3 pt-0 border-tertiary/10">
-        <p class="text-primary/70 text-sm leading-snug">{description}</p>
+        <p class="text-primary/70 text-sm leading-snug text-subtitle">{description}</p>
 
         {tags && tags.length > 0 && (
             <div class="flex flex-wrap gap-2 mt-3">
                 {tags.map((tag) => (
-                    <span class={`px-2.5 py-0.5 text-[11px] font-medium rounded-lg border ${getTagClasses(tag)} text-primary border-primary/30 dark:border-primary/50`}>
+                    <span class={`px-2.5 py-0.5 text-[11px] font-medium rounded-lg border ${getTagClasses(tag)} text-primary border-primary/30 dark:border-primary/50 text-caption`}>
                         {tag}
                     </span>
                 ))}
