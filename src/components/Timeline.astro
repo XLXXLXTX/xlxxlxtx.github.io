@@ -1,0 +1,53 @@
+---
+interface Event {
+    startDate: string;
+    endDate: string;
+    title: string;
+    location: string;
+    institution: string;
+    type: 'work' | 'education';
+    schedule: string;
+    description: string;
+}
+
+interface MyTimeline extends Array<Event> {}
+
+const { events } = Astro.props as { events: MyTimeline };
+import TimelineItem from '@components/TimelineItem.astro';
+---
+
+<section class="max-w-4xl mx-auto mb-5 py-5">
+    <h2 class="text-3xl font-bold text-secondary mb-5 text-left">Timeline</h2>
+
+    <div class="timeline-container">
+      {events.map((event) => (
+        <TimelineItem event={event} />
+      ))}
+      <div style="clear: both;"></div>
+    </div>
+</section>
+
+<style>
+  .timeline-container {
+    position: relative;
+    width: 100%;
+    padding: 0;
+  }
+
+  .timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: #4b5563;
+    transform: translateX(-50%);
+  }
+
+  @media (max-width: 768px) {
+    .timeline-container::before {
+      left: 20px;
+    }
+  }
+</style>
