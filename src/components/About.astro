@@ -8,19 +8,28 @@ const { about } = Astro.props as AboutProps;
 const hasAbout = typeof about === "string" && about.trim().length > 0;
 ---
 
-<section id="about" class="max-w-4xl mx-auto">
-    <article class="flex flex-col gap-6">
-        <h2 class="text-3xl font-bold text-secondary">About</h2>
-    </article>
+<section id="about" class="max-w-4xl mx-auto mb-5 py-5">
+    <h2 class="text-3xl font-bold text-secondary mb-5 text-left">About</h2>
 
-    <div class="mb-5 py-5">
-        {/* render an about in case there is one */}
-        {
-            hasAbout && (
-                <p class="text-lg leading-relaxed text-tertiary whitespace-pre-line font-medium">
-                    {about}
-                </p>
-            )
-        }
-    </div>
+    {/* render an about in case there is one */}
+    {hasAbout && (
+        <div class="about-content">
+            <p class="about-text text-title-medium">
+                {about}
+            </p>
+        </div>
+    )}
 </section>
+
+<style>
+  .about-content {
+    padding: 0;
+    text-align: justify;
+  }
+
+  .about-text {
+    line-height: 1.6;
+    white-space: pre-line;
+    margin: 0;
+  }
+</style>

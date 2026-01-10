@@ -17,6 +17,14 @@
         {
             "href": "#stack",
             "label": "Stack"
+        },
+        {
+            "href": "#timeline",
+            "label": "Timeline"
+        },
+        {
+            "href": "#projects",
+            "label": "Projects"
         }
     ]
 }

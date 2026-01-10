@@ -1,0 +1,45 @@
+[
+  {
+    "startDate": "09/2015",
+    "endDate": "06/2017",
+    "title": "Higher Technical Degree in Multi-platform Application Development",
+    "location": "Zaragoza, Spain",
+    "institution": "Salesianos Ntra. Sra. del Pilar",
+    "type": "education",
+    "description": "",
+    "tags": []
+  },
+  {
+    "startDate": "03/2017",
+    "endDate": "08/2019",
+    "title": "Junior Software Developer",
+    "location": "Zaragoza, Spain",
+    "institution": "Software Grupo V",
+    "type": "work",
+    "schedule": "Full-time",
+    "description": "",
+    "tags": []
+  },
+  {
+    "startDate": "09/2019",
+    "endDate": "09/2025",
+    "title": "Bachelor’s Degree in Computer Science",
+    "location": "Zaragoza, Spain",
+    "institution": "School of Engineering and Architecture (EINA), University of Zaragoza",
+    "type": "education",
+    "description": "",
+    "tags": []
+  },
+  {
+    "startDate": "10/2025",
+    "endDate": "11/2025",
+    "title": "Software Development Engineer Intern",
+    "location": "Zaragoza, Spain",
+    "institution": "Nervia Technologies",
+    "type": "work",
+    "schedule": "Full-time",
+    "description": "",
+    "tags": []
+  }
+
+]

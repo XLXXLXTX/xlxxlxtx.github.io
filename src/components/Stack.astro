@@ -10,10 +10,8 @@ interface MyStack extends Array<StackItem> {}
 const { stack } = Astro.props as { stack: MyStack };
 ---
 
-<section class="max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold text-secondary mb-10 text-left">
-        Stack
-    </h2>
+<section class="max-w-4xl mx-auto mb-5 py-5">
+    <h2 class="text-3xl font-bold text-secondary mb-5 text-left">Stack</h2>
 
     <div class="flex flex-wrap gap-1 justify-center md:justify-start">
         {
@@ -27,10 +25,10 @@ const { stack } = Astro.props as { stack: MyStack };
                         style={styles ? styles : ""}
                     />
 
-                    <span class="absolute -top-9 left-1/2 -translate-x-1/2 
-                                 opacity-0 group-hover:opacity-100 
-                                 pointer-events-none transition-opacity duration-100 
-                                 bg-button-primary text-primary text-[9px] font-black uppercase tracking-tighter
+                    <span class="absolute -top-9 left-1/2 -translate-x-1/2
+                                 opacity-0 group-hover:opacity-100
+                                 pointer-events-none transition-opacity duration-100
+                                 bg-button-primary text-primary text-caption uppercase tracking-tighter
                                  px-1.5 py-0.5 rounded shadow-xl
                                  whitespace-nowrap"
                     >

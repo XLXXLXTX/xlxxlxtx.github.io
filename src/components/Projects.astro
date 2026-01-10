@@ -1,0 +1,30 @@
+---
+interface ProjectItem {
+    title: string;
+    description: string;
+    repoLink?: string;
+    tags?: string[];
+}
+
+interface MyProjects extends Array<ProjectItem> {}
+
+const { projects } = Astro.props as { projects: MyProjects };
+import ProjectCard from "@components/ProjectCard.astro";
+---
+
+<section class="max-w-4xl mx-auto mb-5 py-5">
+    <h2 class="text-3xl font-bold text-secondary mb-5 text-left">Projects</h2>
+
+    <div class="grid grid-cols-1 gap-4">
+        {
+            projects.map(({ title, description, repoLink, tags }) => (
+                <ProjectCard
+                    title={title}
+                    description={description}
+                    repoLink={repoLink}
+                    tags={tags}
+                />
+            ))
+        }
+    </div>
+</section>

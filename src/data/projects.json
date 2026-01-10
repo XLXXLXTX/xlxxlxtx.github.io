@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Recommender System using Language Models and Geolocation",
+    "description": "Bachelor's Thesis — Developed a tourism-focused recommendation engine powered by AI and workflow orchestration. Integrated local and cloud-based LLMs, external APIs, and user data. Established a Likert-scale evaluation strategy to ensure response coherence and context relevance, while optimizing performance and cost by selecting LLMs based on task requirements and resource efficiency.",
+    "repoLink": "https://github.com/XLXXLXTX/rec-sys-with-n8n-and-llms",
+    "tags": [
+      "n8n",
+      "Node.js",
+      "Express.js",
+      "React",
+      "TailwindCSS",
+      "MongoDB",
+      "Redis"
+    ]
+  },
+  {
+    "title": "mini-link! - URL Shortener App",
+    "description": "Built a full-stack URL shortener connecting React (frontend), Express.js (backend), and TursoDB/SQLite (database), styled with TailwindCSS. Deployed on Vercel as a first hands-on experience deploying apps to an external hosting platform.",
+    "repoLink": "https://github.com/XLXXLXTX/mini-link",
+    "tags": [
+      "Node.js",
+      "Express.js",
+      "React",
+      "TailwindCSS",
+      "SQLite",
+      "Vercel",
+      "TursoDB"
+    ]
+  }
+]
