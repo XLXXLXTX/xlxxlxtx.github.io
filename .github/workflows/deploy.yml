@@ -20,6 +20,19 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+
+      # create a .env from reading the environment secrets
+      - name: Create .env from secrets
+        run: |
+          cat > .env << EOF
+          SHOW_INTRODUCTION=${{ secrets.SHOW_INTRODUCTION }}
+          SHOW_SOCIALS=${{ secrets.SHOW_SOCIALS }}
+          SHOW_ABOUT=${{ secrets.SHOW_ABOUT }}
+          SHOW_STACK=${{ secrets.SHOW_STACK }}
+          SHOW_PROJECTS=${{ secrets.SHOW_PROJECTS }}
+          SHOW_TIMELINE=${{ secrets.SHOW_TIMELINE }}
+          EOF
+
       - name: Install, build, and upload your site output
         uses: withastro/action@v4
         # with:
