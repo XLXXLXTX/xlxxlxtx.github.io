@@ -33,8 +33,9 @@ jobs:
           SHOW_TIMELINE=${{ secrets.SHOW_TIMELINE }}
           EOF
 
-      - name: Debug - Check .env contents
-        run: cat .env
+      # check that env file is filled correctly
+      #- name: Debug - Check .env contents
+      #  run: cat .env
 
       - name: Install, build, and upload your site output
         uses: withastro/action@v4
