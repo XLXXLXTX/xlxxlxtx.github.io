@@ -3,26 +3,32 @@
     "description": "Personal website",
     "menus": [
         {
+            "id": "introduction",
             "href": "#",
             "label": "Home"
         },
         {
+            "id": "socials",
             "href": "#socials",
             "label": "Socials"
         },
         {
+            "id": "about",
             "href": "#about",
             "label": "About"
         },
         {
+            "id": "stack",
             "href": "#stack",
             "label": "Stack"
         },
         {
+            "id": "projects",
             "href": "#projects",
             "label": "Projects"
         },
         {
+            "id": "timeline",
             "href": "#timeline",
             "label": "Timeline"
         }

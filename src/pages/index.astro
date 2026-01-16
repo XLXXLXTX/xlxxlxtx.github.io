@@ -26,7 +26,28 @@ const {
 	github,
 	linkedin,
 } = personal;
-const { title, description, menus } = portfolio_info;
+const { title, description, menus: allMenus } = portfolio_info;
+
+// choose which sections to show or hide
+const showIntroduction = import.meta.env.SHOW_INTRODUCTION !== 'false';
+const showSocials = import.meta.env.SHOW_SOCIALS !== 'false';
+const showAbout = import.meta.env.SHOW_ABOUT !== 'false';
+const showStack = import.meta.env.SHOW_STACK !== 'false';
+const showProjects = import.meta.env.SHOW_PROJECTS !== 'false';
+const showTimeline = import.meta.env.SHOW_TIMELINE !== 'false';
+
+// map of section visibility
+const visibleSections: Record<string, boolean> = {
+	introduction: showIntroduction,
+	socials: showSocials,
+	about: showAbout,
+	stack: showStack,
+	projects: showProjects,
+	timeline: showTimeline,
+};
+
+// filter menus based on visible sections
+const menus = allMenus.filter((menu: any) => visibleSections[menu.id] !== false);
 ---
 
 <Layout
@@ -35,35 +56,47 @@ const { title, description, menus } = portfolio_info;
 	menus={menus}
 	footer={{ github, linkedin }}
 >
-	<section id="introduction">
-		<Introduction
-			{name}
-			{name_short}
-			{role}
-			{location}
-			{availability}
-			{profileImage}
-		/>
-	</section>
+	{showIntroduction && (
+		<section id="introduction">
+			<Introduction
+				{name}
+				{name_short}
+				{role}
+				{location}
+				{availability}
+				{profileImage}
+			/>
+		</section>
+	)}
 
-	<section id="socials">
-		<Socials {github} {linkedin} />
-	</section>
+	{showSocials && (
+		<section id="socials">
+			<Socials {github} {linkedin} />
+		</section>
+	)}
 
-	<section id="about">
-		<About {about} />
-	</section>
+	{showAbout && (
+		<section id="about">
+			<About {about} />
+		</section>
+	)}
 
-	<section id="stack">
-		<Stack {stack} />
-	</section>
+	{showStack && (
+		<section id="stack">
+			<Stack {stack} />
+		</section>
+	)}
 
-	<section id="projects">
-		<Projects {projects} />
-	</section>
+	{showProjects && (
+		<section id="projects">
+			<Projects {projects} />
+		</section>
+	)}
 
-	<section id="timeline">
-		<Timeline events={timeline} />
-	</section>
+	{showTimeline && (
+		<section id="timeline">
+			<Timeline events={timeline} />
+		</section>
+	)}
 
 </Layout>
