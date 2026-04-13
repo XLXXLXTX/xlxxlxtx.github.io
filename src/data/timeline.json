@@ -1,5 +1,26 @@
 [
   {
+    "startDate": "04/2026",
+    "endDate": "",
+    "title": "AI Engineer",
+    "location": "Zaragoza, Spain",
+    "institution": "Hiberus",
+    "type": "work",
+    "schedule": "Full-time",
+    "description": "",
+    "tags": []
+  },
+  {
+    "startDate": "02/2026",
+    "endDate": "04/2026",
+    "title": "AI University",
+    "location": "Zaragoza, Spain",
+    "institution": "Hiberus",
+    "type": "education",
+    "description": "280-hour intensive program in end-to-end AI Engineering. Specialized in Advanced Python (NumPy, pandas), Infrastructure as Code (Terraform), and AWS AI stack (SageMaker). Hands-on experience with RAG architectures, Agentic AI, and multi-agent systems, alongside MLOps/LLMOps workflows including CI/CD for AI, model deployment, and performance monitoring.",
+    "tags": []
+  },
+  {
     "startDate": "10/2025",
     "endDate": "11/2025",
     "title": "Software Development Engineer Intern",

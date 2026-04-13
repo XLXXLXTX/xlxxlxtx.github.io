@@ -29,7 +29,7 @@ const { event } = Astro.props;
   </div>
   <div class="timeline-content">
     <div class="timeline-date text-caption">
-      {event.startDate} - {event.endDate}
+      {event.startDate} - {event.endDate || 'Present'}
     </div>
 
     <h3 class="timeline-title text-title">
