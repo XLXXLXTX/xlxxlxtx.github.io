@@ -6,12 +6,13 @@ interface IntroductionProps {
     name_short?: string;
     username: string;
     role: string;
+    company?: string;
     location: string;
     availability: boolean;
     profileImage: string;
 }
 
-const { name, name_short, role, location, availability, profileImage } =
+const { name, name_short, role, company, location, availability, profileImage } =
     Astro.props as IntroductionProps;
 ---
 
@@ -30,7 +31,7 @@ const { name, name_short, role, location, availability, profileImage } =
                 </h1>
 
                 <p class="text-lg md:text-xl text-tertiary font-medium">
-                    {role}
+                    {role} {company && `@ ${company}`}
                 </p>
             </div>
 

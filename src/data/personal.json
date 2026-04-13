@@ -3,9 +3,10 @@
     "name_short": "Javier",
     "username": "XLXXLXTX",
     "role": "AI Engineer",
+    "company": "Hiberus",
+    "availability": false,
     "about": "Hi! I’m Javier — a Computer Scientist from the University of Zaragoza. While my professional experience has been centered on the Java ecosystem and I have expanded my skills in technologies like React and Express, I have recently pivoted towards the field of Data and AI.\n\nI am particularly interested in LLMs and how they are being integrated into modern applications, combining my software engineering foundations with this new technical landscape. I am also deeply interested in homelabbing and automation, where I enjoy tinkering with new tools and exploring different setups just for the sake of learning.\n\nMy goal is to continue growing in professional environments, providing practical solutions and growing with every new technical challenge that arises.",
     "location": "Zaragoza, Spain",
-    "availability": true,
     "github": {
         "label": "GitHub",
         "icon": "ant-design:github-outlined",
