@@ -27,5 +27,7 @@
     { "name": "Postman", "icon": "devicon:postman" },
     { "name": "Dbeaver", "icon": "devicon:dbeaver" },
     { "name": "Ollama", "icon": "simple-icons:ollama" },
-    { "name": "n8n", "icon": "devicon-plain:n8n-wordmark" }
+    { "name": "n8n", "icon": "devicon-plain:n8n-wordmark" },
+    { "name": "Amazon Web Services (AWS)", "icon": "devicon:amazonwebservices"},
+    { "name": "Terraform", "icon": "logos:terraform-icon" }
 ]
